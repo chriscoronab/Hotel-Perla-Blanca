@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+.fuenteRegular{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    font-size: 25px;
+    z-index: 10;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#logo{
+    width: 20%;
+}
+#home{
+    margin-bottom: 2em;
+}
+#home p{
+    text-align: center;
+    margin: 2em 8em;
+}
+#home img{
+    width: 100%;
+}
+.habitacion{
+    border: solid 0.1em rgb(82, 79, 79);
+    margin: 0 4em 2em 4em;
+    display: flex;
+    flex-direction: row;
+}
+.habitacion img{
+    width: 50%;
+    padding-right: 2em;
+}
+.habitacion div{
+    display: flex;
+    flex-direction: column;
+}

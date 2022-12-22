@@ -4,10 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
     <title>Hotel Perla Blanca</title>
 </head>
 <body>
-    <h1>Hotel Perla Blanca</h1>
+    <header>
+        <nav>
+            <a href="#"><img id="logo" src="./assets/img/logo.png" alt="logo"></a>
+            <h1 class="fuenteRegular">Hotel Perla Blanca</h1>
+        </nav>
+    </header>
+    <main class="fuenteRegular">
+        <section id="home">
+            <img src="./assets/img/hotel.jpg" alt="hotelPerlaBlancaImg">
+            <p>Contamos con Habitaciones Dobles, Triples, Cuádruples y Suite. Todas cuentan con Wi-Fi, baño privado, aire acondicionado, equipadas con sommier matrimonial o camas individuales, cerradura electrónica, TV con cable, caja de seguridad individual, secador de pelo, frigobar, pava eléctrica, etc.
+            <br>
+            <br>
+            Además, contamos con estacionamiento cubierto, salón comedor con buffet, quincho con aire y calefacción, parrillas bajo techo, pileta y vestuarios, cancha de vóley, fútbol, sala de juegos con pool, metegol y ping pong.</p>
+        </section>
+        <section id="habitaciones">
+            <article id="habitacionDoble" class="habitacion">
+                <img src="./assets/img/habitacionDoble.jpg" alt="habitacionDobleImg">
+                <div>
+                    <h2>Habitación Doble</h2>
+                    <p><strong>Precio por noche:</strong> USD $35</p>
+                    <p>Máximo 2 personas</p>
+                </div>
+            </article>
+            <article id="habitacionTriple" class="habitacion">
+                <img src="./assets/img/habitacionTriple.jpg" alt="habitacionTripleImg">
+                <div>
+                    <h2>Habitación Triple</h2>
+                    <p><strong>Precio por noche:</strong> USD $40</p>
+                    <p>Máximo 3 personas</p>
+                </div>
+            </article>
+            <article id="habitacionCuadruple" class="habitacion">
+                <img src="./assets/img/habitacionCuadruple.jpg" alt="habitacionCuadrupleImg">
+                <div>
+                    <h2>Habitación Cuádruple</h2>
+                    <p><strong>Precio por noche:</strong> USD $50</p>
+                    <p>Máximo 4 personas</p>
+                </div>
+            </article>
+            <article id="habitacionSuite" class="habitacion">
+                <img src="./assets/img/habitacionSuite.jpg" alt="habitacionSuiteImg">
+                <div>
+                    <h2>Habitación Suite</h2>
+                    <p><strong>Precio por noche:</strong> USD $85</p>
+                    <p>Máximo 4 personas</p>
+                </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
