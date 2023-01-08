@@ -11,13 +11,16 @@ header{
     font-size: 25px;
     z-index: 10;
 }
-nav{
+nav div{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 #logo{
     width: 20%;
+}
+h1{
+    padding-right: 8em;
 }
 #home{
     margin-bottom: 2em;
@@ -26,8 +29,14 @@ nav{
     text-align: center;
     margin: 2em 8em;
 }
+#home span{
+    text-decoration: underline;
+}
 #home img{
     width: 100%;
+}
+a{
+    color: black;
 }
 .habitacion{
     border: solid 0.1em rgb(82, 79, 79);
@@ -39,7 +48,19 @@ nav{
     width: 50%;
     padding-right: 2em;
 }
+h2{
+    padding-top: 0.5em;
+}
 .habitacion div{
     display: flex;
     flex-direction: column;
+}
+#formulario{
+    padding: 0 8em;
+}
+h3{
+    padding-bottom: 0.5em;
+}
+#boton{
+    margin: 1em 0 2em 32em;
 }
