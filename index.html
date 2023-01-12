@@ -69,7 +69,7 @@
         <section id="formulario">
             <h3>Completa tus datos para reservar una habitación</h3>
                 <div id="datosReserva" class="container"></div>
-            <form>
+            <form class="container">
                 <div class="row mb-3">
                     <label for="nombreApellido" class="col-sm-2 col-form-label">Nombre y apellido</label>
                     <div class="col-sm-10">
@@ -113,15 +113,20 @@
                 <div class="row mb-3">
                     <label for="fechaIngreso" class="col-sm-2 col-form-label">Fecha de ingreso</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" min="2023-01-05" max="2023-12-31" required>
+                        <input type="date" class="form-control" oninput="calcularNoches()" id="fechaIngreso" name="fechaIngreso" min="2023-01-05" max="2023-12-31" required>
                     </div>
                 </div>
+                <div id="alertFecha"></div>
                 <div class="row mb-3">
                     <label for="fechaSalida" class="col-sm-2 col-form-label">Fecha de salida</label>
                     <div class="col-sm-10">
-                        <input type="date" class="form-control" id="fechaSalida" name="fechaSalida" min="2023-01-05" max="2023-12-31" required>
+                        <input type="date" class="form-control" oninput="calcularNoches()" id="fechaSalida" name="fechaSalida" min="2023-01-05" max="2023-12-31" required>
                     </div>
-                </div>
+                <div class="row mb-3">
+                    <label for="cantidadNoches" class="col-sm-2 col-form-label" id="nochesLabel">Cantidad de noches</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cantidadNoches" name="cantidadNoches" readonly>
+                    </div>
                 <div class="row mb-3">
                     <label for="metodoPago" class="col-sm-2 col-form-label">Método de pago</label>
                     <div class="col-sm-10">
@@ -132,7 +137,9 @@
                         </select>
                     </div>
                 </div>
-                <button id="boton" type="submit" class="btn btn-primary toggles">Reservar</button>
+                <div id="divBoton">
+                    <button id="boton" type="submit" class="btn btn-primary">Reservar</button>
+                </div>
             </form>
         </section>
     </main>
