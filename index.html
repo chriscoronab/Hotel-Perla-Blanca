@@ -70,6 +70,10 @@
             <h3>Completa tus datos para reservar una habitación</h3>
             <div id="datosReserva" class="container"></div>
             <div id="reservaHecha" class="container"></div>
+            <div id="reservaCancelada" class="container"></div>
+            <div id="botonCancelar">
+                <button type="button" class="btn btn-danger d-none"></button>
+            </div>
             <form id="inputsFormulario" class="container">
                 <div class="row mb-3">
                     <label for="nombreApellido" class="col-sm-2 col-form-label">Nombre y apellido</label>
@@ -138,7 +142,9 @@
                         </select>
                     </div>
                 </div>
-                <button id="boton" type="submit" class="btn btn-primary">Reservar</button>
+                <div>
+                    <button id="boton" type="submit" class="btn btn-primary">Reservar</button>
+                </div>
             </form>
         </section>
     </main>

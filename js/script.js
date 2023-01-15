@@ -11,6 +11,8 @@ let boton=document.querySelector("#boton");
 let alertFecha=document.querySelector("#alertFecha");
 let reservaHecha=document.querySelector("#reservaHecha");
 let inputsFormulario=document.querySelector("#inputsFormulario");
+let botonCancelar=document.querySelector("#botonCancelar");
+let reservaCancelada=document.querySelector("#reservaCancelada");
 
 function calcularNoches(){
     let fechaIngreso=new Date(document.querySelector("#fechaIngreso").value);
@@ -31,7 +33,7 @@ formulario.addEventListener("submit", function (e){
     alertFecha.innerHTML=`<div class="alert alert-danger d-none" role="alert"><p>
     La fecha de salida debe ser mayor a la fecha de ingreso</p></div>`;
     datosReserva.innerHTML=`
-    <div class="alert alert-success" role="alert"><p>¡Gracias por confiar en nosotros! Te enviamos un correo a ${correoElectronico.value} con los datos de tu reserva.
+    <div class="alert alert-success" role="alert"><p>¡Gracias por confiar en nosotros! Te enviamos un correo a ${correoElectronico.value} con los datos de tu reserva 😉
     <br>
     <br>
     Datos de tu reserva:
@@ -56,6 +58,7 @@ formulario.addEventListener("submit", function (e){
     No olvides presentarte en recepción al momento de hacer el check-in con los respectivos DNI para validar los datos.</p>
     </div>`;
     inputsFormulario.innerHTML=`<form id="inputsFormulario" class="container d-none">`;
+    botonCancelar.innerHTML=`<button type="button" class="btn btn-danger">Cancelar Reserva</button>`;
 });
 
 const reservas=[];
@@ -85,14 +88,25 @@ function recuperarDatosReserva(storage){
 
 function yaReservo(reserva){
     if(reserva){
-        reservaHecha.innerHTML=`<div class="alert alert-success" role="alert"><p>¡Hola, ${reserva.nombre}! Ya tienes una reserva hecha en el Hotel Perla Blanca desde el ${reserva.ingreso} hasta el ${reserva.salida}</p></div>`;
+        reservaHecha.innerHTML=`<div class="alert alert-success" role="alert"><p>¡Hola, ${reserva.nombre}! Ya tienes una reserva hecha en el Hotel Perla Blanca desde el ${reserva.ingreso} hasta el ${reserva.salida}.</p></div>`;
         inputsFormulario.innerHTML=`<form id="inputsFormulario" class="container d-none">`;
+        botonCancelar.innerHTML=`<button type="button" class="btn btn-danger">Cancelar Reserva</button>`;
     }
 };
 
 window.onload=()=>{
     yaReservo(recuperarDatosReserva(localStorage));
 };
+
+botonCancelar.addEventListener("click", ()=>{
+    localStorage.clear();
+    sessionStorage.clear();
+    datosReserva.innerHTML=`
+    <div class="alert alert-success d-none" role="alert"></div>`;
+    reservaHecha.innerHTML=`<div class="alert alert-success d-none" role="alert"></div>`;
+    botonCancelar.innerHTML=`<button id="botonCancelar" type="button" class="btn btn-danger d-none"></button>`;
+    reservaCancelada.innerHTML=`<div class="alert alert-danger" role="alert"><p>Lamentamos tu decisión 😢 Tu reserva ha sido cancelada con éxito. Si deseas volver a reservar una habitación, recarga la página.</p></div>`;
+});
 
 const habitaciones=[{
     id: 1,
