@@ -1,0 +1,30 @@
+[
+    {
+    "id": 1,
+    "nombre": "Habitación Doble",
+    "precio": 35,
+    "imagen": "./assets/img/habitacionDoble.jpg",
+    "maximo": 2
+    },
+    {
+    "id": 2,
+    "nombre": "Habitación Triple",
+    "precio": 40,
+    "imagen": "./assets/img/habitacionTriple.jpg",
+    "maximo": 3
+    },
+    {
+    "id": 3,
+    "nombre": "Habitación Cuádruple",
+    "precio": 50,
+    "imagen": "./assets/img/habitacionCuadruple.jpg",
+    "maximo": 4
+    },
+    {
+    "id": 4,
+    "nombre": "Suite",
+    "precio": 85,
+    "imagen": "./assets/img/habitacionSuite.jpg",
+    "maximo": 4
+    }
+]

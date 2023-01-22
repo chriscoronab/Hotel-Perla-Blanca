@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Unbounded:wght@300&display=swap");
+.fuenteTitulo{
+    font-family: "Unbounded", cursive;
+    font-style: light;
+    font-weight: 300;
+}
 .fuenteRegular{
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -19,9 +24,6 @@ nav div{
 #logo{
     width: 20%;
 }
-h1{
-    padding-right: 8em;
-}
 #home{
     margin-bottom: 2em;
 }
@@ -31,9 +33,6 @@ h1{
 }
 #home span{
     text-decoration: underline;
-}
-#home img{
-    width: 100%;
 }
 a{
     color: black;
@@ -63,15 +62,6 @@ h3{
 }
 #alertFecha{
     width: fit-content;
-}
-#nochesLabel{
-    margin-top: 0.9em;
-}
-#cantidadNoches{
-    margin: 1em 0 1em 0.3em;
-}
-#metodoPago{
-    margin-left: 0.4em;
 }
 #boton{
     margin: 1em 0 1em 32em;
